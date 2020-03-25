@@ -1,0 +1,10 @@
+<h1>Welcome to Twitter link app</h1>
+
+
+<br /><br />
+<% if user_signed_in? %>
+    WelCome <%= current_user.email %><br /><br />
+    <%= link_to "Tweets", tweets_path %>
+<% else %>
+    <%= link_to "Login", new_user_session_path  %>
+<% end %>
